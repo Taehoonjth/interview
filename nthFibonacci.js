@@ -6,7 +6,6 @@ function fib(n) {
   var cnt = 2;
   while(cnt < n + 1) {
     memo[cnt] = memo[cnt - 1] + memo[cnt - 2];
-    console.log(memo[cnt], cnt)
     if (memo[cnt] > Number.MAX_SAFE_INTEGER) {
       throw new Error(`Danger! fib(${n}) is over Number.MAX_SAFE_INTEGER`);
     }
