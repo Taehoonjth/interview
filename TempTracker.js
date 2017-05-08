@@ -27,7 +27,7 @@ TempTracker.prototype.insert = function(temperature) {
   if (this.mean === undefined) {
     this.mean = temperature;
   } else {
-    this.mean = ((this.mean * (this.length - 1)) + temperature) / this.length;
+    this.mean = this.sum / this.length;
   }
   //mode: the number which appears the most times.
   if (this.obj[temperature]) {
